@@ -1,0 +1,29 @@
+{
+  "extends": "./.void/tsconfig.json",
+  "include": ["src", "pages", "routes", "middleware", "crons", "queues", "db"],
+  "compilerOptions": {
+    "noEmit": true,
+    "strict": true,
+    "allowJs": true,
+    "target": "ES2022",
+    "module": "ESNext",
+    "jsx": "react-jsx",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "noUnusedLocals": false,
+    "moduleDetection": "force",
+    "noImplicitOverride": true,
+    "noUnusedParameters": false,
+    "verbatimModuleSyntax": true,
+    "moduleResolution": "bundler",
+    "noUncheckedIndexedAccess": true,
+    "allowImportingTsExtensions": true,
+    "noFallthroughCasesInSwitch": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "types": ["vite/client", "void/env"],
+    "paths": {
+      "#/*": ["./lib/*"],
+      "@/*": ["./src/*"]
+    }
+  }
+}

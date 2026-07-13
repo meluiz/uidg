@@ -1,0 +1,48 @@
+{
+  "$schema": "./node_modules/void/schema.json",
+  "target": "cloudflare",
+  "worker": {
+    "compatibility_date": "2026-07-13"
+  },
+  "head": {
+    "title": "Unique ID Generator",
+    "titleTemplate": "%s | uidg",
+    "htmlAttrs": {
+      "lang": "en-US",
+      "class": "light",
+      "style": "color-scheme: light;"
+    },
+    "bodyAttrs": {
+      "class": "relative block min-h-min w-full font-normal font-sans text-lg antialiased sm:text-base"
+    },
+    "meta": [
+      { "charset": "UTF-8" },
+      {
+        "name": "viewport",
+        "content": "width=device-width, initial-scale=1"
+      }
+    ],
+    "link": [
+      {
+        "rel": "preconnect",
+        "href": "https://fonts.googleapis.com"
+      },
+      {
+        "rel": "preconnect",
+        "href": "https://fonts.gstatic.com",
+        "crossorigin": "anonymous"
+      },
+      {
+        "rel": "stylesheet",
+        "href": "https://fonts.googleapis.com/css2?family=Geist+Mono:ital,wght@0,100..900;1,100..900&family=Geist:ital,wght@0,100..900;1,100..900&display=swap"
+      }
+    ]
+  },
+  "routing": {
+    "headers": {
+      "/*": [
+        "Accept-CH: Sec-CH-Prefers-Color-Scheme, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Viewport-Width, Width, DPR"
+      ]
+    }
+  }
+}

@@ -1,0 +1,82 @@
+@import "tailwindcss";
+@import "tailugin";
+
+@theme static {
+  --radius-inherit: inherit;
+
+  --font-sans:
+    "Geist", ui-sans-serif, -apple-system, BlinkMacSystemFont, system-ui,
+    Segoe UI, Inter, Helvetica Neue, Arial, Noto Sans, sans-serif;
+  --font-sans--letter-spacing: -0.05em;
+
+  --font-mono:
+    "Geist Mono", ui-monospace, SFMono-Regular, SF Mono, Menlo, Monaco,
+    Consolas, Liberation Mono, Courier New, monospace;
+  --font-mono--letter-spacing: -0.05em;
+
+  --color-surface: var(--color-white);
+
+  --color-foreground: var(--color-taupe-800);
+
+  --color-stroke: --alpha(var(--color-black) / 8%);
+  --color-stroke-ring: var(--color-taupe-400);
+}
+
+@layer base {
+  @variant dark {
+    --color-surface: color-mix(
+      in srgb,
+      var(--color-taupe-950) 96%,
+      var(--color-white)
+    );
+
+    --color-foreground: var(--color-taupe-100);
+
+    --color-stroke: --alpha(var(--color-white) / 6%);
+    --color-stroke-ring: var(--color-taupe-500);
+  }
+
+  * {
+    @apply border-stroke outline-stroke-ring/50;
+  }
+
+  html {
+    hyphens: auto;
+    font-optical-sizing: auto;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    -webkit-font-smoothing: antialiased;
+    font-synthesis: none;
+    font-variant-numeric: tabular-nums slashed-zero;
+    font-feature-settings:
+      "tnum" 1,
+      "zero" 1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+    overflow-wrap: anywhere;
+    hanging-punctuation: first last;
+  }
+
+  code,
+  kbd,
+  pre,
+  samp {
+    font-family: var(--font-mono);
+    font-feature-settings:
+      "tnum" 1,
+      "zero" 1,
+      "liga" 1,
+      "calt" 1;
+  }
+}
