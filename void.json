@@ -39,6 +39,10 @@
     ]
   },
   "routing": {
+    "prerender": ["/"],
+    "fallbacks": {
+      "/*": "/not-found"
+    },
     "headers": {
       "/*": [
         "Accept-CH: Sec-CH-Prefers-Color-Scheme, Sec-CH-UA, Sec-CH-UA-Mobile, Sec-CH-UA-Platform, Viewport-Width, Width, DPR"
