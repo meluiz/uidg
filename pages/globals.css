@@ -114,3 +114,9 @@
       "calt" 1;
   }
 }
+
+@layer utilities {
+  .container {
+    @apply max-w-2xl px-4 sm:px-6 mx-auto;
+  }
+}
