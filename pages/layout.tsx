@@ -6,7 +6,7 @@ const Layout = ({ children }: React.PropsWithChildren) => {
   return (
     <div
       id="__APP_ROOT"
-      className="relative isolate flex min-h-dvh w-full flex-col bg-surface text-foreground"
+      className="relative isolate flex min-h-dvh w-full flex-col bg-surface-sidebar text-foreground"
     >
       {children}
     </div>
