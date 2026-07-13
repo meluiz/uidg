@@ -12,12 +12,16 @@
   "dependencies": {
     "@ark-ui/react": "^5.37.2",
     "@tailwindcss/vite": "^4.3.1",
+    "@types/js-cookie": "^3.0.6",
     "hono": "^4.12.28",
+    "js-cookie": "^3.0.8",
+    "nucleo-core-outline-24": "^1.2.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "tailugin": "^0.1.1",
     "tailwind-variants": "^3.2.2",
     "tailwindcss": "^4.3.1",
+    "ts-pattern": "^5.9.0",
     "zod": "^4.4.3"
   },
   "devDependencies": {
