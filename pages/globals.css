@@ -16,10 +16,25 @@
 
   --color-surface: var(--color-white);
 
+  --color-surface-sidebar: var(--color-taupe-50);
+  --color-surface-sidebar-primary: var(--color-taupe-800);
+  --color-surface-sidebar-accent: --alpha(var(--color-black) / 4%);
+
   --color-foreground: var(--color-taupe-800);
+
+  --color-foreground-sidebar-primary: var(--color-taupe-50);
+  --color-foreground-sidebar-accent: var(--color-taupe-800);
+  --color-foreground-sidebar: color-mix(
+    in srgb,
+    var(--color-taupe-800) 64%,
+    var(--color-surface-sidebar)
+  );
 
   --color-stroke: --alpha(var(--color-black) / 8%);
   --color-stroke-ring: var(--color-taupe-400);
+
+  --color-stroke-sidebar: --alpha(var(--color-black) / 6%);
+  --color-stroke-sidebar-ring: var(--color-taupe-400);
 }
 
 @layer base {
@@ -30,10 +45,29 @@
       var(--color-white)
     );
 
+    --color-surface-sidebar-primary: var(--color-taupe-100);
+    --color-surface-sidebar-accent: --alpha(var(--color-white) / 4%);
+    --color-surface-sidebar: color-mix(
+      in srgb,
+      var(--color-taupe-950) 97%,
+      var(--color-white)
+    );
+
     --color-foreground: var(--color-taupe-100);
+
+    --color-foreground-sidebar-primary: var(--color-taupe-800);
+    --color-foreground-sidebar-accent: var(--color-taupe-100);
+    --color-foreground-sidebar: color-mix(
+      in srgb,
+      var(--color-taupe-100) 64%,
+      var(--color-surface-sidebar)
+    );
 
     --color-stroke: --alpha(var(--color-white) / 6%);
     --color-stroke-ring: var(--color-taupe-500);
+
+    --color-stroke-sidebar: --alpha(var(--color-white) / 6%);
+    --color-stroke-sidebar-ring: var(--color-taupe-400);
   }
 
   * {
