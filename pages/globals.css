@@ -30,6 +30,10 @@
   --color-surface-sidebar-primary: var(--color-taupe-800);
   --color-surface-sidebar-accent: --alpha(var(--color-black) / 4%);
 
+  --color-surface-input: --alpha(var(--color-black) / 10%);
+  --color-surface-card: var(--color-white);
+  --color-surface-popover: var(--color-white);
+
   --color-foreground: var(--color-taupe-800);
 
   --color-foreground-primary: var(--color-taupe-50);
@@ -54,11 +58,16 @@
     var(--color-surface-sidebar)
   );
 
+  --color-foreground-card: var(--color-taupe-800);
+  --color-foreground-popover: var(--color-taupe-800);
+
   --color-stroke: --alpha(var(--color-black) / 8%);
   --color-stroke-ring: var(--color-taupe-400);
 
   --color-stroke-sidebar: --alpha(var(--color-black) / 6%);
   --color-stroke-sidebar-ring: var(--color-taupe-400);
+
+  --shadow-px: 0 0 0 1px var(--tw-shadow-color), 0 0 0 1px hsla(0, 0%, 98%, 1);
 }
 
 @layer base {
@@ -91,6 +100,18 @@
       var(--color-white)
     );
 
+    --color-surface-input: --alpha(var(--color-white) / 8%);
+    --color-surface-card: color-mix(
+      in srgb,
+      var(--color-surface) 98%,
+      var(--color-white)
+    );
+    --color-surface-popover: color-mix(
+      in srgb,
+      var(--color-surface) 98%,
+      var(--color-white)
+    );
+
     --color-foreground: var(--color-taupe-100);
 
     --color-foreground-primary: var(--color-taupe-800);
@@ -115,11 +136,16 @@
       var(--color-surface-sidebar)
     );
 
+    --color-foreground-card: var(--color-taupe-100);
+    --color-foreground-popover: var(--color-taupe-100);
+
     --color-stroke: --alpha(var(--color-white) / 6%);
     --color-stroke-ring: var(--color-taupe-500);
 
     --color-stroke-sidebar: --alpha(var(--color-white) / 6%);
     --color-stroke-sidebar-ring: var(--color-taupe-400);
+
+    --shadow-px: 0 0 0 1px var(--tw-shadow-color), 0 0 0 1px hsla(0, 0%, 0%, 1);
   }
 
   * {
