@@ -16,11 +16,35 @@
 
   --color-surface: var(--color-white);
 
+  --color-surface-primary: var(--color-taupe-800);
+  --color-surface-secondary: --alpha(var(--color-black) / 4%);
+  --color-surface-accent: --alpha(var(--color-black) / 4%);
+  --color-surface-muted: --alpha(var(--color-black) / 4%);
+
+  --color-surface-info: var(--color-blue-500);
+  --color-surface-warning: var(--color-amber-500);
+  --color-surface-success: var(--color-emerald-500);
+  --color-surface-destructive: var(--color-red-500);
+
   --color-surface-sidebar: var(--color-taupe-50);
   --color-surface-sidebar-primary: var(--color-taupe-800);
   --color-surface-sidebar-accent: --alpha(var(--color-black) / 4%);
 
   --color-foreground: var(--color-taupe-800);
+
+  --color-foreground-primary: var(--color-taupe-50);
+  --color-foreground-secondary: var(--color-taupe-800);
+  --color-foreground-accent: var(--color-taupe-800);
+  --color-foreground-muted: color-mix(
+    in srgb,
+    var(--color-taupe-500) 90%,
+    var(--color-black)
+  );
+
+  --color-foreground-info: var(--color-blue-700);
+  --color-foreground-warning: var(--color-amber-700);
+  --color-foreground-success: var(--color-emerald-700);
+  --color-foreground-destructive: var(--color-red-700);
 
   --color-foreground-sidebar-primary: var(--color-taupe-50);
   --color-foreground-sidebar-accent: var(--color-taupe-800);
@@ -45,6 +69,20 @@
       var(--color-white)
     );
 
+    --color-surface-primary: var(--color-taupe-100);
+    --color-surface-secondary: --alpha(var(--color-white) / 4%);
+    --color-surface-accent: --alpha(var(--color-white) / 4%);
+    --color-surface-muted: --alpha(var(--color-white) / 4%);
+
+    --color-surface-info: var(--color-blue-500);
+    --color-surface-warning: var(--color-amber-500);
+    --color-surface-success: var(--color-emerald-500);
+    --color-surface-destructive: color-mix(
+      in srgb,
+      var(--color-red-500) 90%,
+      var(--color-white)
+    );
+
     --color-surface-sidebar-primary: var(--color-taupe-100);
     --color-surface-sidebar-accent: --alpha(var(--color-white) / 4%);
     --color-surface-sidebar: color-mix(
@@ -54,6 +92,20 @@
     );
 
     --color-foreground: var(--color-taupe-100);
+
+    --color-foreground-primary: var(--color-taupe-800);
+    --color-foreground-secondary: var(--color-taupe-100);
+    --color-foreground-accent: var(--color-taupe-100);
+    --color-foreground-muted: color-mix(
+      in srgb,
+      var(--color-taupe-500) 90%,
+      var(--color-white)
+    );
+
+    --color-foreground-info: var(--color-blue-400);
+    --color-foreground-warning: var(--color-amber-400);
+    --color-foreground-success: var(--color-emerald-400);
+    --color-foreground-destructive: var(--color-red-400);
 
     --color-foreground-sidebar-primary: var(--color-taupe-800);
     --color-foreground-sidebar-accent: var(--color-taupe-100);
