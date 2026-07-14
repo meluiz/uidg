@@ -1,6 +1,6 @@
 import type React from 'react';
 
-import { Clipboard, Swap } from '@ark-ui/react';
+import { Clipboard, Swap, useClipboard } from '@ark-ui/react';
 import { useRouter } from '@void/react';
 import {
   IconCheckOutline24,
@@ -18,7 +18,12 @@ export type ScaffoldProps = React.PropsWithChildren<{
 
 export const Scaffold = (props: ScaffoldProps) => {
   const { children, title, uidg, version } = props;
+
   const router = useRouter();
+  const clipboard = useClipboard({
+    value: uidg,
+    timeout: 1200,
+  });
 
   return (
     <div className="relative flex w-full flex-col gap-8">
@@ -48,9 +53,8 @@ export const Scaffold = (props: ScaffoldProps) => {
           </div>
 
           <div className="relative">
-            <Clipboard.Root
-              value={uidg}
-              timeout={600}
+            <Clipboard.RootProvider
+              value={clipboard}
               className="relative w-full min-w-0 overflow-hidden rounded-md border bg-surface/80 backdrop-blur-md focus:outline-none"
             >
               <Clipboard.Control className="group relative flex w-full items-center">
@@ -97,7 +101,7 @@ export const Scaffold = (props: ScaffoldProps) => {
                   </Button.Root>
                 </Clipboard.Trigger>
               </Clipboard.Control>
-            </Clipboard.Root>
+            </Clipboard.RootProvider>
           </div>
         </div>
       </div>
