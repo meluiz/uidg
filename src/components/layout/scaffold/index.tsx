@@ -1,6 +1,7 @@
 import type React from 'react';
 
 import { Clipboard, Swap, useClipboard } from '@ark-ui/react';
+import { useHotkey } from '@tanstack/react-hotkeys';
 import { useRouter } from '@void/react';
 import {
   IconCheckOutline24,
@@ -24,6 +25,9 @@ export const Scaffold = (props: ScaffoldProps) => {
     value: uidg,
     timeout: 1200,
   });
+
+  useHotkey('Mod+C', () => clipboard.copy());
+  useHotkey('R', () => router.refresh({ preserveScroll: true }));
 
   return (
     <div className="relative flex w-full flex-col gap-8">
