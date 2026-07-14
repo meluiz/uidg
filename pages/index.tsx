@@ -31,7 +31,6 @@ const HomePage = () => {
             key={item.id}
             href={item.href}
             className="flex flex-1 flex-col items-center justify-center gap-y-6 bg-surface-sidebar hover:bg-surface-secondary/72"
-            prefetch="mount"
             aria-label={`Generate ${item.name} (${item.encoding})`}
           >
             <h2 className="font-bold font-mono text-6xl text-foreground/24 md:text-8xl">
