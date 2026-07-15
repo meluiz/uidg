@@ -15,4 +15,14 @@ export const navigation: NavigationItem[] = [
     shortcut: 'c',
     href: '/cuid',
   },
+  {
+    label: 'nanoid',
+    shortcut: 'n',
+    href: '/nanoid',
+  },
+  {
+    label: 'ulid',
+    shortcut: 'l',
+    href: '/ulid',
+  },
 ];
