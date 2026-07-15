@@ -19,6 +19,8 @@ const Layout = ({ children }: React.PropsWithChildren) => {
 
   useHotkey('U', () => navigate('/uuid', router));
   useHotkey('C', () => navigate('/cuid', router));
+  useHotkey('N', () => navigate('/nanoid', router));
+  useHotkey('L', () => navigate('/ulid', router));
 
   return (
     <div
