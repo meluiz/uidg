@@ -14,7 +14,7 @@ import { Button, Prose } from '@/components/ui';
 export type ScaffoldProps = React.PropsWithChildren<{
   title: string;
   uidg: string;
-  version: string;
+  version?: string;
   controls?: React.ReactNode;
 }>;
 
@@ -37,12 +37,14 @@ export const Scaffold = (props: ScaffoldProps) => {
           <div className="flex items-center justify-between">
             <Prose.Heading size="2xlarge">
               {title}
-              <Prose.Text className="ml-1" size="xsmall" asChild>
-                <span>
-                  <span className="sr-only">version</span>
-                  {version}
-                </span>
-              </Prose.Text>
+              {version && (
+                <Prose.Text className="ml-1" size="xsmall" asChild>
+                  <span>
+                    <span className="sr-only">version</span>
+                    {version}
+                  </span>
+                </Prose.Text>
+              )}
             </Prose.Heading>
             <div className="flex items-center gap-x-1.5">
               {controls}
