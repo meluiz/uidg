@@ -34,7 +34,7 @@ interface VersionFunction {
   normalize: (raw?: string | null) => 'v2';
 }
 
-interface CUIDFunction {
+export interface CUIDFunction {
   (options?: CUIDOptions): string;
   version: VersionFunction;
   is: (value: string) => boolean;

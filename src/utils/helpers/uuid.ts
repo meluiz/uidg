@@ -30,7 +30,7 @@ interface VersionFunction {
   normalize: (raw?: string | null) => string;
 }
 
-interface UUIDFunction {
+export interface UUIDFunction {
   (options?: UUIDOptions): string;
   version: VersionFunction;
 }
