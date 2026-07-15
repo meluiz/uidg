@@ -21,4 +21,16 @@ export const GET = createSitemapHandler([
     lastModified: new Date().toISOString().split('T')[0],
     priority: 0.8,
   },
+  {
+    url: `${env.APP_URL}/nanoid`,
+    changeFrequency: 'yearly',
+    lastModified: new Date().toISOString().split('T')[0],
+    priority: 0.8,
+  },
+  {
+    url: `${env.APP_URL}/ulid`,
+    changeFrequency: 'yearly',
+    lastModified: new Date().toISOString().split('T')[0],
+    priority: 0.8,
+  },
 ]);
