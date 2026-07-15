@@ -17,7 +17,7 @@ export const loader = defineHandler<NanoidPageProps>(async (context) => {
 });
 
 export const head = defineHead<NanoidPageProps>(() => ({
-  title: 'Nano ID',
+  title: 'Tiny URL-friendly Unique Identifier',
   meta: [
     {
       name: 'description',
@@ -25,7 +25,7 @@ export const head = defineHead<NanoidPageProps>(() => ({
     },
     {
       property: 'og:title',
-      content: 'Nano ID | uidg',
+      content: 'Tiny URL-friendly Unique Identifier | uidg',
     },
     {
       property: 'og:description',
