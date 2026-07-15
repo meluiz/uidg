@@ -15,10 +15,11 @@ export type ScaffoldProps = React.PropsWithChildren<{
   title: string;
   uidg: string;
   version: string;
+  controls?: React.ReactNode;
 }>;
 
 export const Scaffold = (props: ScaffoldProps) => {
-  const { children, title, uidg, version } = props;
+  const { title, uidg, version, controls = null, children } = props;
 
   const router = useRouter();
   const clipboard = useClipboard({
@@ -44,6 +45,7 @@ export const Scaffold = (props: ScaffoldProps) => {
               </Prose.Text>
             </Prose.Heading>
             <div className="flex items-center gap-x-1.5">
+              {controls}
               <Button.Root
                 outline
                 compact
