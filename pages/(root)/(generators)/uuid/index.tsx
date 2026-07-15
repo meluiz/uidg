@@ -2,12 +2,13 @@ import type { UuidPageProps } from './index.server';
 
 import { Scaffold } from '@/components/layout';
 import { Prose } from '@/components/ui';
+import { VersionControl } from '@/modules/uuid';
 
 const UuidPage = (props: UuidPageProps) => {
   const { uidg, version } = props;
 
   return (
-    <Scaffold title="uuid" uidg={uidg} version={version}>
+    <Scaffold title="uuid" uidg={uidg} version={version} controls={<VersionControl />}>
       <article className="flex flex-col gap-4">
         <div className="flex flex-col gap-y-1.5">
           <Prose.Heading size="xlarge">What is a UUID</Prose.Heading>
