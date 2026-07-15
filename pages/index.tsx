@@ -41,12 +41,12 @@ const HomePage = () => {
   return (
     <main id="__APP_MAIN" className="relative flex w-full flex-1 flex-col">
       <h1 className="sr-only">Unique ID Generator </h1>
-      <div className="relative flex flex-1 flex-col max-lg:divide-y lg:flex-row lg:divide-x">
+      <div className="relative grid flex-1 grid-cols-1 divide-y lg:grid-cols-2 lg:flex-row lg:divide-x">
         {navigation.map((item) => (
           <Link
             key={item.id}
             href={item.href}
-            className="flex flex-1 flex-col items-center justify-center gap-y-6 bg-surface-sidebar hover:bg-surface-secondary/72"
+            className="flex flex-col items-center justify-center gap-y-6 bg-surface-sidebar py-16 hover:bg-surface-secondary/72 lg:nth-of-type-3:border-b-0"
             aria-label={`Generate ${item.name} (${item.encoding})`}
           >
             <h2 className="font-bold font-mono text-6xl text-foreground/24 md:text-8xl">
