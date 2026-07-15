@@ -1,16 +1,13 @@
-import { defineHandler } from 'void';
+import { env } from 'void/env';
 
-export const GET = defineHandler((context) => {
-  const robots = [
-    'User-agent: *',
-    'Allow: /',
-    'Disallow: /not-found',
-    '',
-    `Sitemap: https://uidg.meluiz.com/sitemap.xml`,
-  ].join('\n');
+import { createRobotsHandler } from '@/utils/metadata';
 
-  return context.text(robots, 200, {
-    'Content-Type': 'text/plain; charset=utf-8',
-    'Cache-Control': 'public, max-age=86400, stale-while-revalidate=86400',
-  });
+export const GET = createRobotsHandler({
+  host: env.APP_URL,
+  sitemap: `${env.APP_URL}/sitemap.xml`,
+  rules: {
+    userAgent: '*',
+    allow: '/',
+    disallow: '/not-found',
+  },
 });
