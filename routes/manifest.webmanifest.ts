@@ -1,0 +1,22 @@
+import { createManifestHandler } from '@/utils/metadata';
+
+export const GET = createManifestHandler({
+  start_url: '/',
+  name: 'Unique ID Generator',
+  short_name: 'uidg',
+  display: 'standalone',
+  theme_color: '#151312',
+  background_color: '#141110',
+  icons: [
+    {
+      sizes: '192x192',
+      type: 'image/png',
+      src: '/android-chrome-192x192.png',
+    },
+    {
+      sizes: '512x512',
+      type: 'image/png',
+      src: '/android-chrome-512x512.png',
+    },
+  ],
+});

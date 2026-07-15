@@ -111,7 +111,7 @@
       },
       {
         "rel": "manifest",
-        "href": "/site.webmanifest"
+        "href": "/manifest.webmanifest"
       },
       {
         "rel": "preconnect",
