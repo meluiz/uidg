@@ -34,6 +34,11 @@ export const head = defineHead<UuidPageProps>(() => ({
       content: 'Universally Unique Identifier | uidg',
     },
     {
+      name: 'og:description',
+      content:
+        'Generate random UUID identifiers instantly in your browser. RFC 4122 compliant, free, and private.',
+    },
+    {
       property: 'og:url',
       content: 'https://uidg.meluiz.com/uuid',
     },

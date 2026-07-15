@@ -31,6 +31,11 @@ export const head = defineHead<CuidPageProps>(() => ({
       content: 'Collision-resistant Unique Identifier | uidg',
     },
     {
+      name: 'og:description',
+      content:
+        'Generate CUIDs instantly — secure, sortable, URL-safe identifiers for databases and distributed systems.',
+    },
+    {
       property: 'og:url',
       content: 'https://uidg.meluiz.com/cuid',
     },
