@@ -19,6 +19,22 @@ const navigation = [
     specification: 'CUID2',
     shortcut: 'c',
   },
+  {
+    id: 'nanoid',
+    href: '/nanoid',
+    name: 'Tiny URL-friendly Unique Identifier',
+    encoding: 'base64url',
+    specification: 'Nano ID',
+    shortcut: 'n',
+  },
+  {
+    id: 'ulid',
+    href: '/ulid',
+    name: 'Universally Unique Lexicographically Sortable Identifier',
+    encoding: 'base32',
+    specification: 'ULID',
+    shortcut: 'l',
+  },
 ];
 
 const HomePage = () => {
