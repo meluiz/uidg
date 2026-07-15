@@ -37,8 +37,8 @@ const Layout = ({ children }: React.PropsWithChildren) => {
                     aria-label={item.label}
                     aria-current={item.href === router.url.pathname}
                   >
-                    <Button.Label>{item.label}</Button.Label>
-                    <Kbd.Root>{item.shortcut}</Kbd.Root>
+                    <Button.Label className="max-sm:text-xs">{item.label}</Button.Label>
+                    <Kbd.Root className="max-sm:hidden">{item.shortcut}</Kbd.Root>
                   </Link>
                 </Button.Root>
               </li>
