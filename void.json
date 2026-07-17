@@ -129,7 +129,7 @@
     ]
   },
   "routing": {
-    "prerender": ["/"],
+    "prerender": ["/", "/not-found"],
     "fallbacks": {
       "/*": "/not-found"
     },
