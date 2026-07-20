@@ -13,6 +13,7 @@ import {
   itemIndicator,
   itemText,
   label,
+  positioner,
   root,
   trigger,
   valueText,
@@ -101,8 +102,8 @@ export type IndicatorProps = IndicatorBaseProps & HTMLArkProps<'div'>;
 export type IndicatorBaseProps = Select.IndicatorBaseProps & VariantProps<typeof indicator>;
 
 export const Indicator = (props: IndicatorProps) => {
-  const { className, ...rest } = props;
-  return <Select.Indicator className={indicator({ className })} {...rest} />;
+  const { animate, className, ...rest } = props;
+  return <Select.Indicator className={indicator({ animate, className })} {...rest} />;
 };
 
 /* --------------------------------------------------------------------------------
@@ -116,6 +117,18 @@ export type ClearTriggerBaseProps = Select.ClearTriggerBaseProps &
 export const ClearTrigger = (props: ClearTriggerProps) => {
   const { className, ...rest } = props;
   return <Select.ClearTrigger className={clearTrigger({ className })} {...rest} />;
+};
+
+/* --------------------------------------------------------------------------------
+ * Select - Positioner
+ * -------------------------------------------------------------------------------- */
+
+export type PositionerProps = PositionerBaseProps & HTMLArkProps<'div'>;
+export type PositionerBaseProps = Select.PositionerBaseProps & VariantProps<typeof positioner>;
+
+export const Positioner = (props: PositionerProps) => {
+  const { className, ...rest } = props;
+  return <Select.Positioner className={positioner({ className })} {...rest} />;
 };
 
 /* --------------------------------------------------------------------------------
@@ -195,10 +208,6 @@ export const ItemGroupLabel = (props: ContentProps) => {
 /* --------------------------------------------------------------------------------
  * Select - Exports
  * -------------------------------------------------------------------------------- */
-
-export type PositionerProps = Select.PositionerProps;
-export type PositionerBaseProps = Select.PositionerBaseProps;
-export const Positioner = Select.Positioner;
 
 export type HiddenSelectProps = Select.HiddenSelectProps;
 export type HiddenSelectBaseProps = Select.HiddenSelectBaseProps;

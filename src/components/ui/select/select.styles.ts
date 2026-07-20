@@ -30,7 +30,7 @@ export const control = tv({
         '*:data-[part=trigger]:h-8.5 *:data-[part=trigger]:leading-8.5 sm:*:data-[part=trigger]:h-7.5 sm:*:data-[part=trigger]:leading-7.5',
       ],
       large: [
-        '*:data-[part=trigger]:h-9.5 *:data-[part=trigger]:leading-9.5 sm:*:data-[part=trigger]:h-8.5 sm:*:data-[part=trigger]:leading-8.5]',
+        '*:data-[part=trigger]:h-9.5 *:data-[part=trigger]:leading-9.5 sm:*:data-[part=trigger]:h-8.5 sm:*:data-[part=trigger]:leading-8.5',
       ],
     },
   },
@@ -38,7 +38,7 @@ export const control = tv({
 
 export const trigger = tv({
   base: [
-    'w-full min-w-0 inline-flex rounded-inherit px-[calc(--spacing(3)-1px)] outline-none [transition:background-color_5000000s_ease-in-out_0s] text-left',
+    'w-full min-w-0 inline-flex rounded-inherit px-[calc(--spacing(3)-1px)] outline-hidden [transition:background-color_5000000s_ease-in-out_0s] text-left',
   ],
 });
 
@@ -51,6 +51,16 @@ export const indicator = tv({
     'flex items-center justify-center',
     '*:[svg]:-me-1 *:[svg]:size-4.5 *:[svg]:opacity-80 sm:*:[svg]:size-4',
   ],
+  defaultVariants: {
+    animate: false,
+  },
+  variants: {
+    animate: {
+      true: [
+        'in-open:*:[svg]:rotate-180 *:[svg]:duration-200 *:[svg]:ease-out-quint motion-safe:*:[svg]:transition-transform',
+      ],
+    },
+  },
 });
 
 export const clearTrigger = tv({
@@ -60,16 +70,21 @@ export const clearTrigger = tv({
   ],
 });
 
+export const positioner = tv({
+  base: ['z-10'],
+});
+
 export const content = tv({
   base: [
     'flex flex-col origin-(--transform-origin) text-foreground relative h-full max-h-(--available-height) overflow-y-auto p-1 min-w-(--anchor-width) rounded-lg border bg-surface-popover not-dark:bg-clip-padding shadow-lg/5',
     'before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-lg)-1px)] before:shadow-[0_1px_--theme(--color-black/4%)] dark:before:shadow-[0_-1px_--theme(--color-white/6%)]',
+    'ease-out-quint open:animate-in open:fade-in-0 open:duration-200 closed:animate-out closed:fade-out-0 closed:duration-150 motion-safe:open:zoom-in-95 motion-safe:closed:zoom-out-95',
   ],
 });
 
 export const item = tv({
   base: [
-    'grid min-h-8 in-data-[side=none]:min-w-[calc(var(--anchor-width)+1.25rem)] cursor-default grid-cols-[1rem_1fr] items-center gap-2 rounded-sm py-1 ps-2 pe-4 text-base outline-none disabled:pointer-events-none data-highlighted:bg-surface-accent data-highlighted:text-foreground-accent disabled:opacity-64 sm:min-h-7 sm:text-sm',
+    'grid min-h-8 in-data-[side=none]:min-w-[calc(var(--anchor-width)+1.25rem)] cursor-default grid-cols-[1rem_1fr] items-center gap-2 rounded-sm py-1 ps-2 pe-4 text-base outline-hidden disabled:pointer-events-none data-highlighted:bg-surface-accent data-highlighted:text-foreground-accent disabled:opacity-64 sm:min-h-7 sm:text-sm',
     "*:[svg:not([class*='size-'])]:size-4.5 sm:*:[svg:not([class*='size-'])]:size-4 *:[svg]:pointer-events-none *:[svg]:shrink-0",
   ],
 });
@@ -87,5 +102,5 @@ export const itemGroup = tv({
 });
 
 export const itemGroupLabel = tv({
-  base: ['px-2 py-1.5 font-medium text-muted-foreground text-xs'],
+  base: ['px-2 py-1.5 font-medium text-foreground-muted text-xs'],
 });
