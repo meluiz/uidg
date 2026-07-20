@@ -96,7 +96,11 @@
         "useExhaustiveDependencies": "off",
         "noInvalidConstructorSuper": "off",
         "noInvalidBuiltinInstantiation": "off",
-        "noInvalidUseBeforeDeclaration": "off"
+        "noInvalidUseBeforeDeclaration": "off",
+        "noUnusedImports": {
+          "level": "warn",
+          "fix": "safe"
+        }
       },
       "nursery": {
         "useSortedClasses": {
