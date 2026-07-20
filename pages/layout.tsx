@@ -1,10 +1,10 @@
 import type React from 'react';
-
-import './globals.css';
 import type { VoidRouter } from 'void/pages-client';
 
 import { useHotkey } from '@tanstack/react-hotkeys';
 import { useRouter } from '@void/react';
+
+import './globals.css';
 
 const navigate = (pathname: string, router: VoidRouter) => {
   if (pathname === router.url.pathname) {
