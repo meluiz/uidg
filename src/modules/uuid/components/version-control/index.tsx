@@ -48,7 +48,9 @@ export const VersionControl = () => {
           <Select.Content>
             {collection.items.map((item) => (
               <Select.Item key={item.value} item={item}>
-                <Select.ItemIndicator>✓</Select.ItemIndicator>
+                <Select.ItemIndicator>
+                  <IconCheck2Outline12 />
+                </Select.ItemIndicator>
                 <Select.ItemText>{item.label}</Select.ItemText>
               </Select.Item>
             ))}
