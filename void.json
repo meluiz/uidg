@@ -5,7 +5,7 @@
     "compatibility_date": "2026-07-13"
   },
   "head": {
-    "title": "Unique ID Generator",
+    "title": "Free UUID, ULID, Nano ID & CUID Generator",
     "titleTemplate": "%s | uidg",
     "htmlAttrs": {
       "lang": "en-US",
@@ -23,7 +23,7 @@
       },
       {
         "name": "description",
-        "content": "Free online UUID and CUID generator. Instantly generate universally unique identifiers (UUID) and collision-resistant identifiers (CUID) — no signup, no tracking."
+        "content": "Free online generator for UUID (v1–v7), ULID, Nano ID and CUID2. Instant, browser-side, no signup and no tracking."
       },
       {
         "name": "robots",
@@ -51,7 +51,7 @@
       },
       {
         "property": "og:description",
-        "content": "Instantly generate UUIDs and CUIDs in your browser. Fast, free, and private."
+        "content": "Free online generator for UUID (v1–v7), ULID, Nano ID and CUID2. Instant, browser-side, no signup and no tracking."
       },
       {
         "property": "og:image",
@@ -79,7 +79,7 @@
       },
       {
         "name": "twitter:description",
-        "content": "Instantly generate UUIDs and CUIDs in your browser. Fast, free, and private."
+        "content": "Free online generator for UUID (v1–v7), ULID, Nano ID and CUID2. Instant, browser-side, no signup and no tracking."
       },
       {
         "name": "twitter:image",
@@ -87,6 +87,10 @@
       }
     ],
     "link": [
+      {
+        "rel": "canonical",
+        "href": "https://uidg.meluiz.com"
+      },
       {
         "rel": "icon",
         "href": "/favicon.ico",
