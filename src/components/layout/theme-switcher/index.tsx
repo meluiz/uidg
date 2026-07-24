@@ -1,9 +1,9 @@
 import { ToggleGroup } from '@ark-ui/react';
 import {
-  IconMonitorOutline24,
-  IconMoonOutline24,
-  IconSunOutline24,
-} from 'nucleo-core-outline-24';
+  IconMonitorOutline12,
+  IconMoonStarsOutline12,
+  IconSunOutline12,
+} from 'nucleo-ui-outline-12';
 import { match } from 'ts-pattern';
 
 import { Button } from '@/components/ui';
@@ -38,9 +38,9 @@ export const ThemeSwitcher = (props: ThemeSwitcherProps) => {
             aria-label={theme}
           >
             {match(theme)
-              .with('system', () => <IconMonitorOutline24 />)
-              .with('light', () => <IconSunOutline24 />)
-              .with('dark', () => <IconMoonOutline24 />)
+              .with('system', () => <IconMonitorOutline12 />)
+              .with('light', () => <IconSunOutline12 />)
+              .with('dark', () => <IconMoonStarsOutline12 />)
               .exhaustive()}
           </Button.Root>
         </ToggleGroup.Item>

@@ -1,6 +1,6 @@
 import { createListCollection, Portal } from '@ark-ui/react';
 import { useRouter } from '@void/react';
-import { IconChevronExpandYOutline24 } from 'nucleo-core-outline-24';
+import { IconCheck2Outline12, IconChevronExpandYOutline12 } from 'nucleo-ui-outline-12';
 
 import { Select } from '@/components/ui';
 import { uuid } from '@/utils/helpers';
@@ -39,7 +39,7 @@ export const VersionControl = () => {
         <Select.Trigger>
           <Select.ValueText placeholder="Select an option" />
           <Select.Indicator>
-            <IconChevronExpandYOutline24 />
+            <IconChevronExpandYOutline12 />
           </Select.Indicator>
         </Select.Trigger>
       </Select.Control>

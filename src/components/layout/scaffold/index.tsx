@@ -4,10 +4,12 @@ import { Clipboard, Swap, useClipboard } from '@ark-ui/react';
 import { useHotkey } from '@tanstack/react-hotkeys';
 import { useRouter } from '@void/react';
 import {
-  IconCheckOutline24,
-  IconCopy2Outline24,
-  IconRefresh3Outline24,
-} from 'nucleo-core-outline-24';
+  IconCheck2Outline12,
+  IconChevronRightOutline12,
+  IconCloneOutline12,
+  IconHouseOutline12,
+  IconRefresh3Outline12,
+} from 'nucleo-ui-outline-12';
 
 import { Button, Prose } from '@/components/ui';
 
@@ -57,7 +59,7 @@ export const Scaffold = (props: ScaffoldProps) => {
                 onClick={() => router.refresh({ preserveScroll: true })}
                 aria-label="Regenerate ID"
               >
-                <IconRefresh3Outline24 aria-hidden="true" focusable="false" />
+                <IconRefresh3Outline12 aria-hidden="true" focusable="false" />
               </Button.Root>
             </div>
           </div>
@@ -92,14 +94,14 @@ export const Scaffold = (props: ScaffoldProps) => {
                               aria-hidden="true"
                               className="open:fade-in-50 open:zoom-in-50 closed:fade-out-40 closed:zoom-out-50 closed:animate-out closed:blur-sm duration-200 open:animate-blur-in open:animate-in open:blur-none motion-reduce:animate-none motion-reduce:transition-none"
                             >
-                              <IconCheckOutline24 aria-hidden="true" focusable="false" />
+                              <IconCheck2Outline12 aria-hidden="true" focusable="false" />
                             </Swap.Indicator>
                             <Swap.Indicator
                               type="off"
                               aria-hidden="true"
                               className="open:fade-in-50 open:zoom-in-50 closed:fade-out-40 closed:zoom-out-50 closed:animate-out closed:blur-sm duration-200 open:animate-in open:blur-none motion-reduce:animate-none motion-reduce:transition-none"
                             >
-                              <IconCopy2Outline24 aria-hidden="true" focusable="false" />
+                              <IconCloneOutline12 aria-hidden="true" focusable="false" />
                             </Swap.Indicator>
                           </Swap.Root>
                           <span aria-live="polite" className="sr-only">

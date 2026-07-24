@@ -17,7 +17,7 @@ A free, open-source, privacy-first web app for generating unique identifiers (UU
 
 **Prerequisites:** [Bun](https://bun.sh) 1.0+ (npm/yarn also work) and Node.js 18+.
 
-> **Note on icons:** uidg uses [Nucleo](https://nucleoapp.com/?ref=18825) icons via the `nucleo-core-outline-24` package, which is a **paid** package. You need a valid Nucleo license key to install the project's dependencies. See [Icons & Nucleo License](#icons--nucleo-license) for details.
+> **Note on icons:** uidg uses [Nucleo](https://nucleoapp.com/?ref=18825) icons via the `nucleo-ui-outline-12` package, which is a **paid** package. You need a valid Nucleo license key to install the project's dependencies. See [Icons & Nucleo License](#icons--nucleo-license) for details.
 
 Clone the repository and configure your Nucleo license key before installing:
 
@@ -91,7 +91,7 @@ Set `APP_URL` to your deployed domain (e.g. `https://uidg.meluiz.com`) in the Wo
 
 React 19 · TypeScript · Vite (+ Vite Plus) · Void framework · Hono · Tailwind CSS 4 · Ark UI · Nucleo Icons · Biome · Bun
 
-ID generation powered by [`uuid`](https://www.npmjs.com/package/uuid), [`@paralleldrive/cuid2`](https://www.npmjs.com/package/@paralleldrive/cuid2), [`nanoid`](https://www.npmjs.com/package/nanoid), and [`ulid`](https://www.npmjs.com/package/ulid). Icons by [Nucleo](https://nucleoapp.com/?ref=18825) (`nucleo-core-outline-24` — requires a license, see [Icons & Nucleo License](#icons--nucleo-license)).
+ID generation powered by [`uuid`](https://www.npmjs.com/package/uuid), [`@paralleldrive/cuid2`](https://www.npmjs.com/package/@paralleldrive/cuid2), [`nanoid`](https://www.npmjs.com/package/nanoid), and [`ulid`](https://www.npmjs.com/package/ulid). Icons by [Nucleo](https://nucleoapp.com/?ref=18825) (`nucleo-ui-outline-12` — requires a license, see [Icons & Nucleo License](#icons--nucleo-license)).
 
 ## Contributing
 
@@ -109,7 +109,7 @@ The uidg source code is licensed under **MIT** — see [LICENSE](./LICENSE) for 
 
 ### Icons & Nucleo License
 
-The icons used in this project come from [Nucleo](https://nucleoapp.com/?ref=18825) (`nucleo-core-outline-24`) and are **not** covered by the MIT license. They are proprietary and governed by the [Nucleo Icons License](https://nucleoapp.com/license), which allows their use in open source projects under these conditions:
+The icons used in this project come from [Nucleo](https://nucleoapp.com/?ref=18825) (`nucleo-ui-outline-12`) and are **not** covered by the MIT license. They are proprietary and governed by the [Nucleo Icons License](https://nucleoapp.com/license), which allows their use in open source projects under these conditions:
 
 - Open source projects may use a **maximum of 100 Nucleo icons** and must include Nucleo's copyright notice (below)
 - The icons are licensed for use **only within this product** — you may not extract, redistribute, resell, or sublicense them (or modified versions) for use in other projects

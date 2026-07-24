@@ -18,7 +18,7 @@
     "hono": "^4.12.28",
     "js-cookie": "^3.0.8",
     "nanoid": "^6.0.0",
-    "nucleo-core-outline-24": "^1.2.0",
+    "nucleo-ui-outline-12": "^1.5.0",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
     "tailugin": "^0.1.1",
