@@ -4,7 +4,7 @@ export const root = tv({
   base: [
     'relative inline-flex isolate items-center justify-center gap-x-2 whitespace-nowrap border cursor-pointer shrink-0 grow-0 rounded-md text-base font-medium outline-none transition-shadow focus-visible:ring-2 focus-visible:ring-stroke-ring focus-visible:ring-offset-1 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-64 sm:text-sm',
     'before:pointer-events-none before:absolute before:inset-0 before:rounded-[calc(var(--radius-md)-1px)] pointer-coarse:after:absolute pointer-coarse:after:size-full pointer-coarse:after:min-h-11 pointer-coarse:after:min-w-11',
-    "**:[svg]:-mx-0.5 **:[svg]:pointer-events-none **:[svg]:shrink-0 **:[svg:not([class*='opacity-'])]:opacity-80 **:[svg]:size-4.5 sm:**:[svg]:size-4",
+    "**:[svg]:-mx-0.5 **:[svg]:pointer-events-none **:[svg]:shrink-0 **:[svg:not([class*='opacity-'])]:opacity-80 **:[svg]:size-4 sm:**:[svg]:size-3.5",
   ],
   defaultVariants: {
     size: 'medium',
@@ -20,14 +20,14 @@ export const root = tv({
       xsmall: [
         'h-7 sm:h-6 gap-1 rounded-md px-[calc(--spacing(2)-1px)] text-sm sm:text-xs',
         'before:rounded-[calc(var(--radius-md)-1px)]',
-        '**:[svg]:size-4 sm:**:[svg]:size-3.5',
+        '**:[svg]:size-3-5 sm:**:[svg]:size-3',
       ],
       small: 'h-8 sm:h-7 gap-1.5 px-[calc(--spacing(2.5)-1px)]',
       medium: 'h-9 sm:h-8 px-[calc(--spacing(3)-1px)]',
       large: 'h-10 sm:h-9 px-[calc(--spacing(3.5)-1px)]',
       xlarge: [
         'h-11 sm:h-10 px-[calc(--spacing(4)-1px)] text-lg sm:text-base',
-        '**:[svg]:size-5 sm:**:[svg]:size-4.5',
+        '**:[svg]:size-4.5 sm:**:[svg]:size-4',
       ],
     },
     compact: {
@@ -89,12 +89,12 @@ export const root = tv({
     {
       compact: true,
       size: 'large',
-      className: ['size-11 sm:size-10', '**:[svg]:size-5 sm:**:[svg]:size-4.5'],
+      className: ['size-11 sm:size-10', '**:[svg]:size-4.5 sm:**:[svg]:size-4'],
     },
     {
       compact: true,
       size: 'xlarge',
-      className: ['size-11 sm:size-10', '**:[svg]:size-5 sm:**:[svg]:size-4.5'],
+      className: ['size-11 sm:size-10', '**:[svg]:size-4.5 sm:**:[svg]:size-4'],
     },
   ],
 });

@@ -49,7 +49,7 @@ export const valueText = tv({
 export const indicator = tv({
   base: [
     'flex items-center justify-center',
-    '*:[svg]:-me-1 *:[svg]:size-4.5 *:[svg]:opacity-80 sm:*:[svg]:size-4',
+    '*:[svg]:-me-1 *:[svg]:size-3.5 *:[svg]:opacity-80 sm:*:[svg]:size-3',
   ],
   defaultVariants: {
     animate: false,
@@ -66,7 +66,7 @@ export const indicator = tv({
 export const clearTrigger = tv({
   base: [
     'flex items-center justify-center',
-    '*:[svg]:-me-1 *:[svg]:size-4.5 *:[svg]:opacity-80 sm:*:[svg]:size-4',
+    '*:[svg]:-me-1 *:[svg]:size-3.5 *:[svg]:opacity-80 sm:*:[svg]:size-3',
   ],
 });
 
@@ -85,7 +85,7 @@ export const content = tv({
 export const item = tv({
   base: [
     'grid min-h-8 in-data-[side=none]:min-w-[calc(var(--anchor-width)+1.25rem)] cursor-default grid-cols-[1rem_1fr] items-center gap-2 rounded-sm py-1 ps-2 pe-4 text-base outline-hidden disabled:pointer-events-none data-highlighted:bg-surface-accent data-highlighted:text-foreground-accent disabled:opacity-64 sm:min-h-7 sm:text-sm',
-    "*:[svg:not([class*='size-'])]:size-4.5 sm:*:[svg:not([class*='size-'])]:size-4 *:[svg]:pointer-events-none *:[svg]:shrink-0",
+    "*:[svg:not([class*='size-'])]:size-3.5 sm:*:[svg:not([class*='size-'])]:size-3 *:[svg]:pointer-events-none *:[svg]:shrink-0",
   ],
 });
 
