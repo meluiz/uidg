@@ -1,5 +1,7 @@
 import type { CuidPageProps } from './index.server';
 
+import { Link } from '@void/react';
+
 import { Scaffold } from '@/components/layout';
 import { Prose } from '@/components/ui';
 
@@ -74,8 +76,12 @@ const CuidPage = (props: CuidPageProps) => {
             <h2>Not sortable — the trade-off</h2>
           </Prose.Heading>
           <Prose.Text>
-            Unlike UUID v7 or the old CUID, CUID2 is deliberately <strong>not sortable</strong>{' '}
-            by creation time. This protects privacy, but it means you cannot rely on the id for
+            Unlike{' '}
+            <Link href="/uuid" data={{ v: 7 }}>
+              UUID v7
+            </Link>{' '}
+            or the old CUID, CUID2 is deliberately <strong>not sortable</strong> by creation
+            time. This protects privacy, but it means you cannot rely on the id for
             chronological ordering — add a separate <strong>timestamp column</strong> if you
             need that.
           </Prose.Text>

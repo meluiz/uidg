@@ -1,5 +1,7 @@
 import type { NanoidPageProps } from './index.server';
 
+import { Link } from '@void/react';
+
 import { Scaffold } from '@/components/layout';
 import { Prose } from '@/components/ui';
 
@@ -39,8 +41,8 @@ const NanoidPage = (props: NanoidPageProps) => {
             <h2>Denser than a UUID</h2>
           </Prose.Heading>
           <Prose.Text>
-            A UUID v4 uses 16 symbols (hex) and needs 36 characters to carry 122 bits of
-            randomness. Nano ID uses 64 symbols, so each character carries{' '}
+            A <Link href="/uuid">UUID v4</Link> uses 16 symbols (hex) and needs 36 characters to
+            carry 122 bits of randomness. Nano ID uses 64 symbols, so each character carries{' '}
             <strong>6 bits</strong> of entropy — 21 characters add up to{' '}
             <strong>126 bits</strong>, slightly more than a UUID v4 in barely more than half the
             length.
@@ -81,7 +83,11 @@ const NanoidPage = (props: NanoidPageProps) => {
             Since a Nano ID encodes <strong>no timestamp</strong>, it reveals nothing about when
             or where it was created — but it also cannot be sorted by creation time. If you need
             chronological ordering, add a separate <strong>timestamp column</strong> or reach
-            for a time-ordered format like UUID v7.
+            for a time-ordered format like{' '}
+            <Link href="/uuid" data={{ v: 7 }}>
+              UUID v7
+            </Link>
+            .
           </Prose.Text>
         </div>
 
@@ -90,10 +96,10 @@ const NanoidPage = (props: NanoidPageProps) => {
             <h2>One caveat: HTML ids</h2>
           </Prose.Heading>
           <Prose.Text>
-            Unlike CUID2, a Nano ID can start with a <strong>digit</strong>, a{' '}
-            <strong>hyphen</strong>, or an underscore, which makes it invalid as a bare HTML id
-            or CSS selector. If you use it in the DOM, add a letter <strong>prefix</strong> (for
-            example <code>id-V1StGXR8_Z5jdHi6B-myT</code>).
+            Unlike <Link href="/cuid">CUID2</Link>, a Nano ID can start with a{' '}
+            <strong>digit</strong>, a <strong>hyphen</strong>, or an underscore, which makes it
+            invalid as a bare HTML id or CSS selector. If you use it in the DOM, add a letter{' '}
+            <strong>prefix</strong> (for example <code>id-V1StGXR8_Z5jdHi6B-myT</code>).
           </Prose.Text>
         </div>
 
@@ -104,8 +110,12 @@ const NanoidPage = (props: NanoidPageProps) => {
           <Prose.Text>
             A great default when you want <strong>short, URL-safe, unguessable</strong> ids with
             minimal footprint — share links, public tokens, file names, client-generated keys.
-            If you need ids that double as sortable database keys, prefer UUID v7; if you need
-            HTML-safe ids out of the box, CUID2 fits better.
+            If you need ids that double as sortable database keys, prefer{' '}
+            <Link href="/uuid" data={{ v: 7 }}>
+              UUID v7
+            </Link>
+            ; if you need HTML-safe ids out of the box, <Link href="/cuid">CUID2</Link> fits
+            better.
           </Prose.Text>
         </div>
       </article>

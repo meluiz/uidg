@@ -1,5 +1,7 @@
 import type { UlidPageProps } from './index.server';
 
+import { Link } from '@void/react';
+
 import { Scaffold } from '@/components/layout';
 import { Prose } from '@/components/ui';
 
@@ -14,8 +16,12 @@ const UlidPage = (props: UlidPageProps) => {
           <Prose.Text>
             <strong>ULID</strong> (Universally Unique Lexicographically Sortable Identifier) is
             a 128-bit id encoded as <strong>26 characters</strong> of Crockford's Base32. It
-            carries the same amount of information as a UUID, but in a shorter, case-insensitive
-            string that <strong>sorts by creation time</strong>.
+            carries the same amount of information as a{' '}
+            <Link href="/uuid" aria-label="uuid">
+              UUID
+            </Link>
+            , but in a shorter, case-insensitive string that{' '}
+            <strong>sorts by creation time</strong>.
           </Prose.Text>
         </div>
 
@@ -40,7 +46,19 @@ const UlidPage = (props: UlidPageProps) => {
             Sorting ULIDs alphabetically <strong>is</strong> sorting them chronologically. That
             makes them excellent <strong>database keys</strong>: new rows land at the end of the
             index instead of at random positions, avoiding the index fragmentation that purely
-            random ids (UUID v4, Nano ID, CUID2) cause on write-heavy tables.
+            random ids (
+            <Link href="/uuid" aria-label="uuid">
+              UUID v4
+            </Link>
+            ,{' '}
+            <Link href="/nanoid" aria-label="nano id">
+              Nano ID
+            </Link>
+            ,{' '}
+            <Link href="/cuid" aria-label="cuid">
+              CUID2
+            </Link>
+            ) cause on write-heavy tables.
           </Prose.Text>
         </div>
 
@@ -97,10 +115,13 @@ const UlidPage = (props: UlidPageProps) => {
           </Prose.Heading>
           <Prose.Text>
             The pick when you want <strong>time-ordered</strong> database keys with a compact,
-            human-friendly encoding. UUID v7 offers the same idea as an official{' '}
-            <strong>RFC standard</strong> with wider native database support; ULID answers with
-            a shorter, case-insensitive string. If ordering does not matter and privacy does,
-            CUID2 or Nano ID fit better.
+            human-friendly encoding.{' '}
+            <Link href="/uuid" data={{ v: 7 }} aria-label="uuid v7">
+              UUID v7
+            </Link>{' '}
+            offers the same idea as an official <strong>RFC standard</strong> with wider native
+            database support; ULID answers with a shorter, case-insensitive string. If ordering
+            does not matter and privacy does, CUID2 or Nano ID fit better.
           </Prose.Text>
         </div>
       </article>
