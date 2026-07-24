@@ -1,6 +1,7 @@
 import { defineHandler, defineHead } from 'void';
 
 import { cuid } from '@/utils/helpers';
+import { createSoftwareApplication } from '@/utils/metadata';
 
 export type CuidPageProps = {
   uidg: string;
@@ -18,32 +19,34 @@ export const loader = defineHandler<CuidPageProps>(async (context) => {
   };
 });
 
-export const head = defineHead<CuidPageProps>(() => ({
-  title: 'Collision-resistant Unique Identifier',
-  meta: [
-    {
-      name: 'description',
-      content:
-        'Generate CUIDs instantly — secure, sortable, URL-safe identifiers for databases and distributed systems.',
-    },
-    {
-      property: 'og:title',
-      content: 'Collision-resistant Unique Identifier | uidg',
-    },
-    {
-      name: 'og:description',
-      content:
-        'Generate CUIDs instantly — secure, sortable, URL-safe identifiers for databases and distributed systems.',
-    },
-    {
-      property: 'og:url',
-      content: 'https://uidg.meluiz.com/cuid',
-    },
-  ],
-  link: [
-    {
-      rel: 'canonical',
-      href: 'https://uidg.meluiz.com/cuid',
-    },
-  ],
-}));
+export const head = defineHead<CuidPageProps>((context) => {
+  return createSoftwareApplication(context, {
+    title: 'CUID2 Generator — Collision-resistant Unique IDs Online',
+    meta: [
+      {
+        name: 'description',
+        content:
+          'Generate CUID2s instantly — secure, collision-resistant, URL-safe identifiers for databases and distributed systems. Free and private.',
+      },
+      {
+        property: 'og:title',
+        content: 'CUID2 Generator — Collision-resistant Unique IDs Online | uidg',
+      },
+      {
+        name: 'og:description',
+        content:
+          'Generate CUID2s instantly — secure, collision-resistant, URL-safe identifiers for databases and distributed systems. Free and private.',
+      },
+      {
+        property: 'og:url',
+        content: 'https://uidg.meluiz.com/cuid',
+      },
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://uidg.meluiz.com/cuid',
+      },
+    ],
+  });
+});
