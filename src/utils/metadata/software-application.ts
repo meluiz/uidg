@@ -31,8 +31,6 @@ const findLink = (descriptor: HeadDescriptor, rel: string) => {
 const resolveUrl = (context: CloudContext, descriptor: HeadDescriptor, url?: string) => {
   const candidate = url ?? findLink(descriptor, 'canonical');
 
-  console.log(candidate);
-
   if (candidate != null) {
     return candidate;
   }
