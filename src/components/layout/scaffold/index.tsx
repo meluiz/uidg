@@ -35,16 +35,18 @@ export const Scaffold = (props: ScaffoldProps) => {
       <div className="relative border-b">
         <div className="container relative flex flex-col gap-y-3 py-4">
           <div className="flex items-center justify-between">
-            <Prose.Heading size="2xlarge">
-              {title}
-              {version && (
-                <Prose.Text className="ml-1" size="xsmall" asChild>
-                  <span>
-                    <span className="sr-only">version</span>
-                    {version}
-                  </span>
-                </Prose.Text>
-              )}
+            <Prose.Heading size="2xlarge" asChild>
+              <h2>
+                {title}
+                {version && (
+                  <Prose.Text className="ml-1" size="xsmall" asChild>
+                    <span>
+                      <span className="sr-only">version</span>
+                      {version}
+                    </span>
+                  </Prose.Text>
+                )}
+              </h2>
             </Prose.Heading>
             <div className="flex items-center gap-x-1.5">
               {controls}
