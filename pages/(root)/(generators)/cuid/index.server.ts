@@ -33,7 +33,7 @@ export const head = defineHead<CuidPageProps>((context) => {
         content: 'CUID2 Generator — Collision-resistant Unique IDs Online | uidg',
       },
       {
-        name: 'og:description',
+        property: 'og:description',
         content:
           'Generate CUID2s instantly — secure, collision-resistant, URL-safe identifiers for databases and distributed systems. Free and private.',
       },

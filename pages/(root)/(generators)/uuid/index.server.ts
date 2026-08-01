@@ -36,7 +36,7 @@ export const head = defineHead<UuidPageProps>((context) => {
         content: 'UUID Generator — Random UUID v1, v3, v4, v5, v6 & v7 Online',
       },
       {
-        name: 'og:description',
+        property: 'og:description',
         content:
           'Generate random UUID identifiers instantly in your browser. RFC 9562 compliant, free, and private.',
       },
