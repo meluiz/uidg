@@ -12,7 +12,9 @@ const CuidPage = (props: CuidPageProps) => {
     <Scaffold title="cuid" uidg={uidg} version={version}>
       <article className="flex flex-col gap-4">
         <div className="flex flex-col gap-y-1.5">
-          <Prose.Heading size="xlarge">What is a CUID2</Prose.Heading>
+          <Prose.Heading size="xlarge" asChild>
+            <h2>What is a CUID2</h2>
+          </Prose.Heading>
           <Prose.Text>
             <strong>CUID2</strong> (Collision-resistant Unique Identifier, version 2) generates
             secure, collision-resistant ids optimized for horizontal scaling and performance.

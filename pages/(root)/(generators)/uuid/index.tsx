@@ -13,7 +13,9 @@ const UuidPage = (props: UuidPageProps) => {
     <Scaffold title="uuid" uidg={uidg} version={version} controls={<VersionControl />}>
       <article className="flex flex-col gap-4">
         <div className="flex flex-col gap-y-1.5">
-          <Prose.Heading size="xlarge">What is a UUID</Prose.Heading>
+          <Prose.Heading size="xlarge" asChild>
+            <h2>What is a UUID</h2>
+          </Prose.Heading>
           <Prose.Text>
             A <strong>UUID</strong> (Universally Unique Identifier) is a 128-bit identifier,
             usually written as 32 hexadecimal digits grouped into five blocks (8-4-4-4-12). Its
@@ -59,12 +61,6 @@ const UuidPage = (props: UuidPageProps) => {
             Version 4 is the most common one today: 122 bits are filled with{' '}
             <strong>random</strong> data. It is simple, reveals nothing about the machine or
             time, and its collision probability is practically zero. The trade-off is that it is{' '}
-            <strong>not sortable</strong>, which can hurt database index locality.
-          </Prose.Text>
-          <Prose.Text>
-            Version 4 is the most common one today: 122 bits are filled with{' '}
-            <strong>random</strong> data. It is simple, reveals nothing about the machine or
-            time, and its collision probability is practically zero. The trade-off is that it is{' '}
             <strong>not sortable</strong>, which can hurt database index locality. If you want
             the same randomness in a shorter string, <Link href="/nanoid">Nano ID</Link> and{' '}
             <Link href="/cuid">CUID2</Link> pack more entropy into fewer characters.
@@ -75,13 +71,6 @@ const UuidPage = (props: UuidPageProps) => {
           <Prose.Heading size="large" asChild>
             <h2>Sortable, modern ids</h2>
           </Prose.Heading>
-          <Prose.Text>
-            The newer versions bring back time ordering without the privacy issues of v1.
-            Version 6 reorders the v1 fields so the most significant timestamp bits come first,
-            and version 7 — the recommended choice for new systems — uses a{' '}
-            <strong>Unix timestamp in milliseconds</strong> followed by randomness. Both are{' '}
-            <strong>sortable</strong>, making them great as database keys.
-          </Prose.Text>
           <Prose.Text>
             The newer versions bring back time ordering without the privacy issues of v1.
             Version 6 reorders the v1 fields so the most significant timestamp bits come first,

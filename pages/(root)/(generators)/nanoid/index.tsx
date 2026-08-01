@@ -12,7 +12,9 @@ const NanoidPage = (props: NanoidPageProps) => {
     <Scaffold title="nanoid" uidg={uidg}>
       <article className="flex flex-col gap-4">
         <div className="flex flex-col gap-y-1.5">
-          <Prose.Heading size="xlarge">What is Nano ID</Prose.Heading>
+          <Prose.Heading size="xlarge" asChild>
+            <h2>What is Nano ID</h2>
+          </Prose.Heading>
           <Prose.Text>
             <strong>Nano ID</strong> is a tiny, secure, URL-friendly unique string ID generator.
             It produces <strong>21 characters</strong> by default, drawn from a{' '}

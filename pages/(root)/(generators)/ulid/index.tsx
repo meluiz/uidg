@@ -12,7 +12,9 @@ const UlidPage = (props: UlidPageProps) => {
     <Scaffold title="ulid" uidg={uidg}>
       <article className="flex flex-col gap-4">
         <div className="flex flex-col gap-y-1.5">
-          <Prose.Heading size="xlarge">What is a ULID</Prose.Heading>
+          <Prose.Heading size="xlarge" asChild>
+            <h2>What is a ULID</h2>
+          </Prose.Heading>
           <Prose.Text>
             <strong>ULID</strong> (Universally Unique Lexicographically Sortable Identifier) is
             a 128-bit id encoded as <strong>26 characters</strong> of Crockford's Base32. It
