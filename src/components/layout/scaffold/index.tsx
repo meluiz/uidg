@@ -89,19 +89,15 @@ export const Scaffold = (props: ScaffoldProps) => {
           </Breadcrumb.Root>
           <div className="flex flex-col gap-y-3">
             <div className="flex items-center justify-between">
-              <Prose.Heading size="2xlarge" asChild>
-                <h2>
-                  {title}
-                  {version && (
-                    <Prose.Text className="ml-1" size="xsmall" asChild>
-                      <span>
-                        <span className="sr-only">version</span>
-                        {version}
-                      </span>
-                    </Prose.Text>
-                  )}
-                </h2>
-              </Prose.Heading>
+              <div className="inline-flex items-end align-baseline">
+                <Prose.Heading size="2xlarge">{title}</Prose.Heading>
+                {version && (
+                  <Prose.Text className="ml-1 -translate-y-0.75" size="xsmall">
+                    <span className="sr-only">version</span>
+                    {version}
+                  </Prose.Text>
+                )}
+              </div>
               <div className="flex items-center gap-x-1.5">
                 {controls}
                 <Button.Root
