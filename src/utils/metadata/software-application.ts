@@ -85,12 +85,44 @@ export const resolveWebApplication = (data: WebApplication) => {
   if (data.author != null) {
     schema.author = {
       '@type': 'Person',
+      '@id': `${origin}#author`,
       name: data.author.name,
       ...(data.author.url != null && { url: data.author.url }),
     };
+
+    schema.publisher = { '@id': `${origin}#author` };
   }
 
-  schema.publisher = { '@id': `${origin}#author` };
+  return escapeJson(JSON.stringify(schema));
+};
+
+export type WebSiteData = {
+  name: string;
+  url: string;
+  description?: string;
+};
+
+export const resolveWebSite = (data: WebSiteData) => {
+  let origin: string;
+
+  try {
+    origin = new URL(data.url).origin;
+  } catch {
+    throw new TypeError(`WebSite url must be absolute, received "${data.url}".`);
+  }
+
+  const schema: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${origin}#website`,
+    name: data.name,
+    url: data.url,
+    publisher: { '@id': `${origin}#author` },
+  };
+
+  if (data.description != null) {
+    schema.description = data.description;
+  }
 
   return escapeJson(JSON.stringify(schema));
 };
