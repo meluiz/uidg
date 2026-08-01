@@ -39,11 +39,7 @@
   --color-foreground-primary: var(--color-taupe-50);
   --color-foreground-secondary: var(--color-taupe-800);
   --color-foreground-accent: var(--color-taupe-800);
-  --color-foreground-muted: color-mix(
-    in srgb,
-    var(--color-taupe-500) 90%,
-    var(--color-black)
-  );
+  --color-foreground-muted: color-mix(in srgb, var(--color-taupe-500) 90%, var(--color-black));
 
   --color-foreground-info: var(--color-blue-700);
   --color-foreground-warning: var(--color-amber-700);
@@ -72,11 +68,7 @@
 
 @layer base {
   @variant dark {
-    --color-surface: color-mix(
-      in srgb,
-      var(--color-taupe-950) 96%,
-      var(--color-white)
-    );
+    --color-surface: color-mix(in srgb, var(--color-taupe-950) 96%, var(--color-white));
 
     --color-surface-primary: var(--color-taupe-100);
     --color-surface-secondary: --alpha(var(--color-white) / 4%);
@@ -94,23 +86,11 @@
 
     --color-surface-sidebar-primary: var(--color-taupe-100);
     --color-surface-sidebar-accent: --alpha(var(--color-white) / 4%);
-    --color-surface-sidebar: color-mix(
-      in srgb,
-      var(--color-taupe-950) 97%,
-      var(--color-white)
-    );
+    --color-surface-sidebar: color-mix(in srgb, var(--color-taupe-950) 97%, var(--color-white));
 
     --color-surface-input: --alpha(var(--color-white) / 8%);
-    --color-surface-card: color-mix(
-      in srgb,
-      var(--color-surface) 98%,
-      var(--color-white)
-    );
-    --color-surface-popover: color-mix(
-      in srgb,
-      var(--color-surface) 98%,
-      var(--color-white)
-    );
+    --color-surface-card: color-mix(in srgb, var(--color-surface) 98%, var(--color-white));
+    --color-surface-popover: color-mix(in srgb, var(--color-surface) 98%, var(--color-white));
 
     --color-foreground: var(--color-taupe-100);
 
