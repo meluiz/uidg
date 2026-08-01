@@ -40,7 +40,7 @@ const navigation = [
 const HomePage = () => {
   return (
     <main id="__APP_MAIN" className="relative flex w-full flex-1 flex-col">
-      <h1 className="sr-only">Unique ID Generator </h1>
+      <h1 className="sr-only">Unique ID Generator</h1>
       <div className="relative grid flex-1 grid-cols-1 divide-y lg:grid-cols-2 lg:flex-row lg:divide-x">
         {navigation.map((item) => (
           <Link
